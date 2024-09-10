@@ -2,7 +2,39 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, run the docker compose:
+
+```bash
+npm run run-compose
+```
+
+Then copy .env.example to .env
+
+Then make migrations
+
+```bash
+npm run generate-migrations
+```
+
+Once migrations files created, run
+
+```bash
+npm run push
+```
+
+Optional: use the drizzle studio
+
+```bash
+npm run studio
+```
+
+install dependencies
+
+```bash
+npm install
+```
+
+Lastly run the server
 
 ```bash
 npm run dev
@@ -14,7 +46,13 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then try to play with the WHERE Clause in file 
+
+```
+app/page.tsx
+```
+
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

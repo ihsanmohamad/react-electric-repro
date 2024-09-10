@@ -3,21 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "generate-migrations": "drizzle-kit generate --config=app/lib/db/drizzle.config.ts",
+    "push": "drizzle-kit push --config=app/lib/db/drizzle.config.ts",
+    "up": "drizzle-kit up --config=app/lib/db/drizzle.config.ts",
+    "migrate": "tsx app/lib/db/migrations/migrate.ts",
+    "seed": "tsx app/lib/db/seeders/seed.ts",
+    "studio": "drizzle-kit studio --config=app/lib/db/drizzle.config.ts",
+    "lint": "next lint",
+    "run-compose": "docker compose up"
   },
   "dependencies": {
     "@electric-sql/react": "^0.3.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
     "next": "14.2.9",
+    "pg": "^8.12.0",
+    "postgres": "^3.4.4",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/pg": "^8.11.8",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.9",
     "postcss": "^8",
