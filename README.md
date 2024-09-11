@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+install dependencies
+
+```bash
+npm install
+```
+
 First, run the docker compose:
 
 ```bash
@@ -26,12 +32,6 @@ Optional: use the drizzle studio
 
 ```bash
 npm run studio
-```
-
-install dependencies
-
-```bash
-npm install
 ```
 
 Lastly run the server
